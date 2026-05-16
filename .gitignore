@@ -95,6 +95,7 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-ssr
 
 # Gatsby files
 .cache/
@@ -141,5 +142,16 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # End of https://www.toptal.com/developers/gitignore/api/node
