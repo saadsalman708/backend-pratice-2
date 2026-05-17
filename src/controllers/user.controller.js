@@ -1,4 +1,3 @@
-// import userSchema from "../models/user.model.schema.js";
 import { createUser , getUsers } from "../services/user.service.js";
 
 const create = async (req, res) => {
@@ -17,7 +16,7 @@ const create = async (req, res) => {
 
 const get = async (req, res) => {
   try {
-    const users = await getUsers();
+    const users = await getUsers();    
     res.status(200).json({
       users,
     });

@@ -1,18 +1,12 @@
 import User from "../models/user.model.schema.js";
 
-const createUser = async ({ name, email, age, rich }) => {
-
-    const user = await User.create({
-      name: name,
-      email: email,
-      age: age,
-      rich: rich,
-    });
+const createUser = async (data) => {
+    const user = await User.create(data);
     return user;
 };
 
 const getUsers = async ()=> {
-    const users = await User.find({});
+    const users = await User.find({});    
     return users;
 };
 
