@@ -6,6 +6,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     age: {
       type: Number,
       required: true,
@@ -20,4 +25,4 @@ const userSchema = new mongoose.Schema(
   },
 );
 
-export default mongoose.model("Users" , userSchema);
+export default mongoose.model("Users", userSchema);
