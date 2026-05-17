@@ -1,0 +1,2 @@
+"start": "node --env-file=.env src/server.js"
+"dev": "nodemon --env-file=.env src/server.js"
