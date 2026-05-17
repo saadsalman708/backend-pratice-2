@@ -1,4 +1,4 @@
-import { createUser , getUsers } from "../services/user.service.js";
+import { createUser , getUsers , removeUser } from "../services/user.service.js";
 
 const create = async (req, res) => {
   try {
@@ -27,4 +27,17 @@ const get = async (req, res) => {
   }
 };
 
-export { create , get };
+const remove = async (req , res) => {
+  try {
+    const user = await removeUser(req.params.id);
+    res.status(200).json({
+      message: "User Deleted Successfully!"
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+}
+
+export { create , get , remove };

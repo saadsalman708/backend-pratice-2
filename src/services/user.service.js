@@ -6,8 +6,11 @@ const createUser = async (data) => {
 };
 
 const getUsers = async ()=> {
-    const users = await User.find({});    
-    return users;
+    return await User.find({});  
 };
 
-export { createUser, getUsers };
+const removeUser = async (id) => {
+    return await User.findByIdAndDelete(id);
+};
+
+export { createUser, getUsers , removeUser };
