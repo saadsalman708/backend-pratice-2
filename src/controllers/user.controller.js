@@ -1,5 +1,5 @@
 // import userSchema from "../models/user.model.schema.js";
-import { createUser , getUsers } from "../service/user.services.js";
+import { createUser , getUsers } from "../services/user.service.js";
 
 const create = async (req, res) => {
   try {
