@@ -13,4 +13,8 @@ const removeUser = async (id) => {
     return await User.findByIdAndDelete(id);
 };
 
+const updateUser = async (id) => {
+    
+}
+
 export { createUser, getUsers , removeUser };

@@ -29,7 +29,7 @@ const get = async (req, res) => {
 
 const remove = async (req , res) => {
   try {
-    const user = await removeUser(req.params.id);
+    await removeUser(req.params.id);
     res.status(200).json({
       message: "User Deleted Successfully!"
     });
